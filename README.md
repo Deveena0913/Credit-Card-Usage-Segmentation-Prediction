@@ -6,45 +6,32 @@
 </div>
 
 ## Overview:
-Marketers struggle to allocate budgets effectively due to uncertainty about customer behavior.
-Misallocations lead to wasted resources and missed revenue opportunities. 
-By predicting customer conversions, this project seeks to minimize these inefficiencies and guide data-driven decision-making for better campaign outcomes.
-Additionally, we developed a Power BI dashboard to further analyze campaign conversion prediction results and provide interactive visualizations for stakeholders.
+This project focuses on developing unsupervised learning models for customer segmentation based on credit card usage data. The models aim to provide insights into distinct customer segments, improve credit risk assessment, and optimize marketing strategies. Deliverables include segmentation models, comprehensive data visualizations, and a comparative analysis of various algorithms.
 
 ## Problem Statement:
-The Objective of this project are as follows:
-1. Develop a robust predictive model: Accurately predict whether a customer will convert based on demographic and engagement features.
-2. Optimize marketing strategies: Improve campaign targeting, increase conversion rates, and maximize return on advertising spend (ROAS).
+Develop comprehensive unsupervised learning models to accurately segment credit card customers based on their spending and payment behaviors. By utilizing these models, the institution aims to improve targeted marketing, risk assessment, and overall customer relationship management.
 
 ## Dataset Description:
-- 8000 rows and 20 columns
-- Attributes include Demographic Information, Marketing Specific Variables, Customer Engagement Variables, Historical Variables and Conversion ( Converted for 1 and 0 for not )
+- 8950 rows and 18 columns
+- Attributes include Balance, Purchases, Cash Advances etc
 
 ## Machine Learning Task:
-This project employs supervised learning, specifically a classification task, to predict converted customers. Three algorithms were utilized: Decision Tree, Random Forest, Gradient Bossting and CatBoost. Each algorithm was evaluated with and without balancing techniques, including over-sampling.
+This project employs unsupervised learning, working with PCA , t-SNE, K-Means and Agglomerative Clustering 
 
 ## Methodology:
 ### Data Analysis:
 - Exploratory Data Analysis (EDA) to understand data distribution and patterns
-- Addressing class imbalance (more converted customers than not converted)
-- Identifying factors influencing conversion
+- Correlation between features
 
 ### Data Preprocessing:
 - Handling missing values and outliers
 - Transforming categorical variables (using encoding)
-- MinMax scaling numerical features
+- Standard scaling numerical features
+- Applying PCA and t- SNE
 
 ### Model Building and Evaluation:
-- Training and evaluating models with and without data balancing
-- Metrics used: confusion matrices, precision, recall, F1-score, accuracy and PR curve.
+- Applying K-Means Clustering and Agglomerative Clustering
+- Comparing both the Clustering methods using scores 
 
 ## Outcome:
-CatBoost with and without over-sampling (SMOTE) chosen for high recall and balanced performance.
-
-## Power BI Dashboard Development:
-In addition to the machine learning model development, we also created a Power BI dashboard to further analyze the conversion prediction results and provide interactive visualizations for stakeholders.
-<div align="center">
-  <a href="https://github.com/Deveena0913/Digital-Marketing-Campaign-Conversion-Prediction-/blob/main/Digital%20Marketing%20Campaign%20Conversion%20Project%20Deveena%20Vig.pbix">
-    <img src="https://github.com/Deveena0913/Digital-Marketing-Campaign-Conversion-Prediction-/blob/main/Digital%20Marketing%20Campaign%20Conversion.png">
-  </a>
-</div>
+K- Means is the best supporting method 
